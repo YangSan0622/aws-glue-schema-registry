@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# This is a scratch helper build script for C code, we will update it in future.
+
+cmake --build build --target clean
+cmake -S. -Bbuild 
+cd build
+#cmake --build . --target native_schema_registry_c_data_types
+cmake --build .

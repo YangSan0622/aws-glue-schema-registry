@@ -17,3 +17,14 @@ dotnet clean .
 dotnet build .
 dotnet test .
 ```
+
+
+### Testing
+
+#### Link the test resources
+In native-schema-registry/csharp/AWSGsrSerDe/AWSGsrSerDe.Tests/resources directory, run
+```shell
+ln -s ../../../../../serializer-deserializer/src/test/resources/avro avro &&
+ln -s ../../../../../serializer-deserializer/src/test/resources/json json &&
+ln -s ../../../../../serializer-deserializer/src/test/resources/protobuf protobuf 
+```
