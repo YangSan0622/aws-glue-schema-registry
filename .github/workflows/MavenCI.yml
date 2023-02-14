@@ -40,7 +40,7 @@ jobs:
       run: mvn --file build-tools/pom.xml clean install
     
     - name: Clean, build and install 
-      run: mvn -e --file pom.xml clean install
+      run: mvn -e -X --file pom.xml clean install
     
     - name: Run tests
       run: mvn --file pom.xml test
