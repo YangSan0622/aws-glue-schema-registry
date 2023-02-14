@@ -44,7 +44,7 @@ jobs:
       run: mkdir ~/tmp 
     
     - name: Clean, build and install 
-      run: mvn -e -X --file pom.xml clean install -Djib.applicationCache=~/tmp
+      run: mvn -e -X --file pom.xml clean install -Djibinstall=~/tmp
     
     - name: Run tests
       run: mvn --file pom.xml test
