@@ -41,7 +41,7 @@ jobs:
       run: mvn --file build-tools/pom.xml clean install
       
     - name: check
-      run: ls C:\Users\runneradmin\.m2\repository\software\amazon\glue\schema-registry-build-tools\1.1.14\
+      run: ls C:\Users\runneradmin\.m2\repository\software\amazon\glue\schema-registry-build-tools\1.1.14\ && rm -rf C:\Users\runneradmin\.m2\repository\software\amazon\glue\schema-registry-build-tools\1.1.14\schema-registry-build-tools-1.1.14.jar
     
     - name: Clean, build and install 
       run: mvn -e -X --file pom.xml clean install
