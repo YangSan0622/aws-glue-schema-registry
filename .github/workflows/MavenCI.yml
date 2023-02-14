@@ -18,7 +18,7 @@ jobs:
       max-parallel: 5
       fail-fast: false
       matrix:
-        operating-system: [ubuntu-latest, windows-latest, macos-latest]
+        operating-system: [windows-latest, ubuntu-latest, macos-latest]
         java-version: ['8', '9', '11', '13']
 
     steps:
@@ -36,8 +36,8 @@ jobs:
         key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
         restore-keys: ${{ runner.os }}-m2
         
-    - name: install build-tools 
-      run: mvn --file build-tools/pom.xml clean install
+#     - name: install build-tools 
+#       run: mvn --file build-tools/pom.xml clean install
     
     - name: Clean, build and install 
       run: mvn -e -X --file pom.xml clean install
